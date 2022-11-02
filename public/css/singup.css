@@ -1,0 +1,94 @@
+.sing_main {
+  width: auto;
+  height: auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+#signUp {
+  font-size: 1.4rem;
+}
+.signUpInput {
+  font-size: medium;
+}
+.btnSignup {
+  padding: 0.3rem 2.8rem 0.3rem 2.8rem;
+  font-size: 1.5rem;
+  border: 0.2rem solid #040462;
+  background-color: #040462;
+  color: beige;
+  border-radius: 0.5rem;
+}
+.userName {
+  color: red;
+  font-weight: bolder;
+  margin-left: 1rem;
+  visibility: hidden;
+  font-size: 1rem;
+}
+.checkbox {
+  color: red;
+  font-weight: bolder;
+  margin-left: 1rem;
+  visibility: hidden;
+  font-size: 1rem;
+}
+.password {
+  color: red;
+  font-weight: bolder;
+  margin-left: 1rem;
+  visibility: hidden;
+  font-size: 1rem;
+}
+.number {
+  color: red;
+  font-weight: bolder;
+  margin-left: 1rem;
+  visibility: hidden;
+  font-size: 1rem;
+}
+.avatar {
+  color: red;
+  font-weight: bolder;
+  margin-left: 1rem;
+  visibility: hidden;
+  font-size: 1rem;
+}
+.email {
+  color: red;
+  font-weight: bolder;
+  margin-left: 1rem;
+  visibility: hidden;
+  font-size: 1rem;
+}
+.error {
+  color: red;
+  font-weight: bolder;
+  margin-left: 1rem;
+  visibility: hidden;
+  font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 814px) and (max-width: 990px) {
+  .sing_main {
+    height: auto;
+  }
+}
+@media only screen and (min-width: 714px) and (max-width: 813px) {
+  .sing_main {
+    height: auto;
+  }
+}
+@media only screen and (min-width: 614px) and (max-width: 713px) {
+  .sing_main {
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 314px) and (max-width: 613px) {
+  .sing_main {
+    height: auto;
+    /* color: green; */
+  }
+}

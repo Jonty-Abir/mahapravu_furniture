@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mahapravu Furniture মহাপ্রভু ফার্নিচার  Furniture Shop">
+    <meta name="keywords" content="Mahapravu Furniture মহাপ্রভু ফার্নিচার  Furniture Shop Abir Santra Asit Santra">
+    <meta name="author" content="abir santra">
+    <title><%= title %></title>
+    <!-- ====================
+                 favicone start
+
+    ========================= -->
+    <link rel="shortcut icon" href="/image/FavIcone/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="/image/FavIcone/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/image/FavIcone/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/image/FavIcone/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/image/FavIcone/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/image/FavIcone/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/image/FavIcone/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/image/FavIcone/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/image/FavIcone/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/image/FavIcone/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/image/FavIcone/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/image/FavIcone/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/image/FavIcone/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/image/FavIcone/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+    <!-- ======================
+            favicone End
+    ========================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
+      crossorigin="anonymous"
+    />
+
+    <!-- font awsome icone are here -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- metiral icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <!-- swiper cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="/css/home_page.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/singup.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/landing_page.css" />
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="center">
+        <header class="header sticky">
+          <div class="manu">
+            <a href="/">
+              <span class="material-symbols-outlined manuIcone"> menu </span>
+            </a>
+            <a class="for-toggle">
+              <span name="open-button" open-button" class="material-symbols-outlined manuIcone2 open-button"  > menu </span>
+              <span name="close-button" class="material-symbols-outlined manuIcone2 close-button"> close </span>
+            </a>
+            <a href="/" class="compani">
+              <span>মহাপ্রভু ফার্নিচার</span>
+            </a>
+          </div>
+          <nav class="navbar  ">
+            <ul class="navbar-list" style="margin: 0;">
+              <li>
+                <a href="/home" class="navbar-link home-link">home</a
+                ><span class="line"></span>
+              </li>
+              <li>
+                <a href="#" class="navbar-link about-link">about</a
+                ><span class="line"></span>
+              </li>
+              <li>
+                <a href="#" class="navbar-link service-link">service</a
+                ><span class="line"></span>
+              </li>
+              <li>
+                <a href="/contactUs/" class="navbar-link contact-link"
+                  >contact us</a
+                ><span class="line"></span>
+              </li>
+              <% if( !hasCookie && !userDetails ){ %>
+              <li>
+                <a href="/login/" class="navbar-link login">login</a
+                ><span class="line"></span>
+              </li>
+              <li>
+                <a href="/reg/" class="navbar-link signup">signup</a
+                ><span class="line"></span>
+              </li>
+              <% } else {%>
+              <li>
+                <div class="iconeHub">
+                  <img src="/uploads/<%= userDetails.avatar %>""
+                  class="userProfile " alt="profile" /><span
+                    class="material-symbols-outlined logoutIcone"
+                    onclick="logout()"
+                  >
+                    logout
+                  </span>
+                  <!-- <div class="logout" >
+                    <span class="material-symbols-outlined"> logout </span>
+                  </div> -->
+                </div>
+                <span class="line"></span>
+              </li>
+              <% } %>
+            </ul>
+          </nav>
+        </header>
+        <script defer>
+          const successToast = Toastify({
+            text: "LOGOUT",
+            duration: 300,
+            position: "left",
+            offset: {
+              x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+              y: 100, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            },
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+              width: "28rem",
+              height: "5rem",
+              paddingLeft: "8rem",
+              paddingTop: "6px",
+              margin: "auto",
+              position: "relative",
+              top: "10rem",
+              let: "12rem",
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              "z-index": 9999,
+            },
+          });
+          const failureToast = Toastify({
+            text: "Failed!",
+            duration: 300,
+            position: "left",
+            "z-index": 9999,
+            offset: {
+              x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+              y: 100, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            },
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+              width: "28rem",
+              height: "3rem",
+              paddingLeft: "8rem",
+              paddingTop: "6px",
+              margin: "auto",
+              position: "relative",
+              top: "10rem",
+              let: "12rem",
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+            },
+          });
+          const logout = async () => {
+            const res = await axios.delete("/login/");
+            if (!res.error) {
+              successToast.showToast();
+              location.reload();
+            } else {
+              failureToast.showToast();
+            }
+          };
+        </script>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+</html>

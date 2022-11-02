@@ -1,0 +1,228 @@
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* background-color: red; */
+}
+body {
+  color: #000;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1ebeb;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  display: grid;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(12, 13, 13, 0.487);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.713);
+  border-radius: 1rem;
+  border: 0.2rem solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #129ff7;
+}
+
+.myFooter {
+  margin-top: auto;
+}
+.card0 {
+  box-shadow: 0px 4px 8px 0px #757575;
+  border-radius: 0px;
+  font-size: 1.5rem;
+  margin-top: 5.6rem;
+  padding-top: 2rem;
+}
+
+.card2 {
+  margin: 0px 40px;
+}
+
+.logo {
+  width: 25rem;
+  height: 125rem;
+  margin-top: 20px;
+  margin-left: 35px;
+  object-fit: cover;
+}
+
+.image {
+  width: 35rem;
+  height: 28rem;
+  padding: 2rem;
+  object-fit: cover;
+}
+
+.border-line {
+  border-right: 1px solid #eeeeee;
+}
+
+.facebook {
+  background-color: #3b5998;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.twitter {
+  background-color: #1da1f2;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.linkedin {
+  background-color: #2867b2;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.line {
+  height: 1px;
+  width: 45%;
+  background-color: #e0e0e0;
+  margin-top: 10px;
+}
+.iconeHub {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.logoutIcone {
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.userProfile {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.or {
+  width: 10%;
+  font-weight: bold;
+}
+
+.text-sm {
+  font-size: 14px !important;
+}
+
+::placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {
+  color: #bdbdbd;
+  font-weight: 300;
+}
+
+::-ms-input-placeholder {
+  color: #bdbdbd;
+  font-weight: 300;
+}
+
+input,
+textarea {
+  padding: 10px 12px 10px 12px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #2c3e50;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+input:focus,
+textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #304ffe;
+  outline-width: 0;
+}
+
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background-color: #1a237e;
+  width: 150px;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.btn-blue:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+
+.bg-blue {
+  color: #fff;
+  background-color: #1a237e;
+}
+
+@media screen and (max-width: 991px) {
+  .logo {
+    margin-left: 0px;
+  }
+
+  .image {
+    width: 300px;
+    height: 220px;
+  }
+
+  .border-line {
+    border-right: none;
+  }
+
+  .card2 {
+    border-top: 1px solid #eeeeee !important;
+    margin: 0px 15px;
+  }
+  .socialMedia {
+    display: none;
+  }
+}

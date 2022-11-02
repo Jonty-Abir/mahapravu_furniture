@@ -1,0 +1,135 @@
+<form class="mx-1 mx-md-4" id="signUp">
+  <div class="d-flex flex-row align-items-center mb-1">
+    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+    <div class="form-outline flex-fill mb-0">
+      <input
+        type="text"
+        id="form3Example1c"
+        class="form-control signUpInput"
+        placeholder="enter your name"
+        name="username"
+        autocomplete="off"
+      />
+
+      <label class="form-label" for="form3Example1c"
+        >Your Name
+        <p class="username error" style="display: inline">error</p>
+      </label>
+    </div>
+  </div>
+  <div class="d-flex flex-row align-items-center mb-1">
+    <i class="fas fa-address-book fa-lg me-3 fa-fw"></i>
+    <div class="form-outline flex-fill mb-0">
+      <input
+        type="text"
+        id="form3Example1c"
+        class="form-control signUpInput"
+        placeholder="enter mobile no"
+        name="mobile"
+        autocomplete="off"
+      />
+      <label class="form-label" for="form3Example1c"
+        >Number
+        <p class="mobile error" style="display: inline">error</p></label
+      >
+    </div>
+  </div>
+
+  <div class="d-flex flex-row align-items-center mb-1">
+    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+    <div class="form-outline flex-fill mb-0">
+      <input
+        type="email"
+        id="form3Example3c"
+        class="form-control signUpInput"
+        placeholder="example@gmail.com"
+        name="email"
+        autocomplete="off"
+      />
+      <label class="form-label" for="form3Example3c"
+        >Email
+        <p class="email error" style="display: inline"></p
+      ></label>
+    </div>
+  </div>
+
+  <div class="d-flex flex-row align-items-center mb-1">
+    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+    <div class="form-outline flex-fill mb-0">
+      <input
+        type="password"
+        id="form3Example4c"
+        class="form-control signUpInput"
+        placeholder="enter a strong password"
+        name="password"
+        autocomplete="off"
+        
+      />
+      <label class="form-label" for="form3Example4c"
+        >Password
+        <p class="password error" style="display: inline">error</p></label
+      >
+    </div>
+  </div>
+
+  <div class="d-flex flex-row align-items-center mb-1">
+    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+    <div class="form-outline flex-fill mb-0">
+      <input
+        type="password"
+        id="form3Example4cd"
+        class="form-control signUpInput"
+        placeholder="confirm password"
+        name="confirmPw"
+        autocomplete="off"
+      />
+      <label class="form-label" for="form3Example4cd"
+        >confirm password
+        <p class="pw2 error" style="display: inline">error</p></label
+      >
+    </div>
+  </div>
+  <div class="mb-3 d-flex justify-content-center align-items-center">
+    <i
+      class="fa-regular fa-image"
+      style="margin-right: 6px; font-size: 1.5rem"
+    ></i>
+    <input
+      class="form-control form-control-sm signUpInput"
+      id="formFileSm"
+      type="file"
+      name="avatar"
+      autocomplete="off"
+    />
+    <p class="avatar error" style="display: inline">error</p>
+  </div>
+
+  <div class="form-check d-flex justify-content-center mb-1">
+    <small>
+      <input
+        type="checkbox"
+        class="form-check-input signUpInput"
+        id="premition"
+        name="permission"
+        checked="true"
+        autocomplete="off"
+      />
+    </small>
+    <label style="padding-left: 25px" class="form-check-label" for="premition"
+      ><small>
+        <b>
+          apply theme's & condition
+          <p class="permission error" style="display: inline">error</p>
+        </b></small
+      ></label
+    >
+  </div>
+
+  <div class="d-flex mx-4 mt-4 mb-lg-3">
+    <button type="submit" class="btnSignup">Sign Up</button>
+  </div>
+  <small
+    >Already have account?
+    <a href="/login/" class="text-danger">Go to login</a>
+  </small>
+</form>

@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --hoverColor: #216f54ed;
+  --para: #f2eaea;
+  --bg: #007b5e;
+  --active: #ede8f0;
+  --hover: #484646df;
+  --fontColor: #fff;
+}
+li {
+  list-style: none;
+}
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100vw;
+  height: 5.8rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg);
+  /* border: 0.1rem solid #fff; */
+  /* border-radius: 0.5rem; */
+  /* margin-right: 1.2rem; */
+  position: relative;
+}
+.manu {
+  display: flex;
+  align-items: center;
+  margin-left: 0.8rem;
+}
+.manuIcone,
+.manuIcone2 {
+  color: var(--fontColor);
+  border: 2px solid white;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 2.7rem;
+}
+.manuIcone2 {
+  display: none;
+}
+/* .manuIcone2 */
+.compani {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 0.8rem;
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+.compani:hover {
+  color: #fff;
+}
+
+.manuIcone:hover,
+manuIcone:active,
+manuIcone2:hover,
+manuIcone2:active {
+  background-color: var(--hover);
+  color: #fff;
+  transition: all 0.3s linear;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+.navbar-list {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-link {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 5px 10px 5px 10px;
+  /* color: var(--fontColor) !important; */
+  /* border-bottom: 2px solid #fff !important; */
+}
+
+.logout {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 5px 10px 5px 10px;
+}
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--fontColor);
+  transition: all 0.3s linear;
+  text-align: center;
+}
+.logout {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--para);
+  transition: all 0.3s linear;
+  text-align: center;
+}
+.navbar-link:hover,
+.navbar-link:active,
+.logout:hover {
+  color: var(--active);
+  background-color: rgb(92, 96, 92);
+  border-bottom: 0.2rem solid #fff;
+}
+.navbar-link:active {
+  color: pink;
+}
+.signup,
+.login {
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-list li {
+    border: none;
+    border-bottom: 0.2rem solid #fff;
+  }
+  .manuIcone2 {
+    display: block;
+  }
+  .close-button {
+    display: none;
+  }
+  .manuIcone {
+    display: none;
+  }
+
+  /* .navbar-list {
+    display: none;
+  } */
+  .manu {
+    width: 92vw;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: auto;
+    /* margin-right: 0.5rem; */
+    z-index: 9999;
+  }
+  .compani {
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+  }
+  .navbar {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    /*  */
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+    /*  */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .navbar-list {
+    gap: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+    font-size: 2rem;
+  }
+  .signup,
+  .login {
+    border: none;
+    border-radius: 0;
+  }
+  .active .navbar {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .active .manu .open-button[name="open-button"] {
+    display: none;
+  }
+  .active .manu .close-button[name="close-button"] {
+    display: block;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 667px) {
+  .navbar-list li {
+    border: none;
+    border-bottom: 0.2rem solid var(--fontColor);
+  }
+}
+@media screen and (max-width: 424px) {
+  .navbar-list li {
+    border-bottom: 0.2rem solid var(--fontColor);
+  }
+  .compani {
+    font-size: 2.8rem;
+  }
+  .header {
+    height: 7rem;
+  }
+  .manuIcone,
+  .manuIcone2 {
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 6px;
+  }
+}

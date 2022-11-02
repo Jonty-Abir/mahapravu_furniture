@@ -1,0 +1,50 @@
+<form action="/login/" method="post" enctype="multipart/form-data">
+  <div class="row px-3">
+    <label class="mb-1"><h6 class="mb-0 text-sm">Email Address</h6></label>
+    <input
+      class="mb-1"
+      type="text"
+      name="email"
+      autocomplete="off"
+      placeholder="Enter a valid email address or phone number"
+      value="<%= data %>"
+    />
+    <% if(errors.email){ %>
+    <p style="font-weight: bolder; color: red; font-size: 1.3rem">
+      <%= errors.email.msg %>
+    </p>
+    <% } %>
+  </div>
+  <div class="row px-3">
+    <label class="mb-1"><h6 class="mb-0 text-sm">Password</h6></label>
+    <input type="password" name="password" autocomplete="off" placeholder="Enter password" />
+    <% if(errors.password){ %>
+    <p style="font-weight: bolder; color: red; font-size: 1.3rem">
+      <%= errors.password.msg %>
+    </p>
+    <% } %>
+  </div>
+  <div class="row px-3 mb-4">
+    <div class="custom-control custom-checkbox custom-control-inline">
+      <!-- <div class="form-check"> -->
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="check2"
+        name="check"
+        checked
+        autocomplete="off"
+      />
+      <label class="form-check-label" for="check2">Rember me</label>
+      <!-- </div> -->
+    </div>
+    <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
+  </div>
+  <div class="row mb-3 px-3">
+    <% if(errors.common){ %>
+    <p style="font-weight: bolder; color: red"><%= errors.common.msg %></p>
+    <% } %>
+    <button type="submit" class="btn btn-blue text-center">Login</button>
+  </div>
+  <script defer src="./js/nevBar.js"></script>
+</form>
