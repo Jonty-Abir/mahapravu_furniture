@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=devlopment nodemon index.js"
+    "start": "NODE_ENV=production node index.js"
   },
   "author": "abir santra",
   "license": "ISC",
